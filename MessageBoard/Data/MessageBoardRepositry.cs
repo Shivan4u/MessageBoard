@@ -25,7 +25,7 @@ namespace MessageBoard.Data
         }
 
 
-        public bool save()
+        public bool Save()
         {
             try
             {
@@ -57,7 +57,7 @@ namespace MessageBoard.Data
         }
 
 
-        public IQueryable<Topic> GetTopicsInculdingReplies()
+        public IQueryable<Topic> GetTopicsIncludingReplies()
         {
             return _ctx.Topics.Include("Replies"); 
         }

@@ -24,7 +24,7 @@ namespace MessageBoard.Controllers
 
             if (includeReplies == true)
             {
-                results = _repo.GetTopicsInculdingReplies();
+                results = _repo.GetTopicsIncludingReplies();
             }
             else {
                 results = _repo.GetTopics();
@@ -46,7 +46,7 @@ namespace MessageBoard.Controllers
                 newTopic.Created = DateTime.UtcNow;
             }
 
-            if (_repo.AddTopic(newTopic) && _repo.save())
+            if (_repo.AddTopic(newTopic) && _repo.Save())
             { 
                 return  Request.CreateResponse(HttpStatusCode.Created,newTopic);
             }

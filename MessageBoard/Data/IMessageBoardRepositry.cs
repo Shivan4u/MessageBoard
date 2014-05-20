@@ -10,10 +10,10 @@ namespace MessageBoard.Data
     {
 
          IQueryable<Topic> GetTopics();
-         IQueryable<Topic> GetTopicsInculdingReplies();
+         IQueryable<Topic> GetTopicsIncludingReplies();
          IQueryable<Reply> GetReplyByTopic(int topicID);
 
-         bool save();
+         bool Save();
 
          bool AddTopic(Topic topic);
          bool AddReply(Reply reply);

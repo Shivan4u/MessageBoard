@@ -28,10 +28,11 @@ namespace MessageBoard.Controllers
                                     .OrderByDescending(x => x.Created)
                                     .Take(25)
                                     .ToList();
-                                    
 
             return View(topics);
         }
+
+        
 
         public ActionResult About()
         {

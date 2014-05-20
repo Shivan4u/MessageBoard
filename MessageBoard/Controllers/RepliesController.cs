@@ -34,7 +34,7 @@ namespace MessageBoard.Controllers
 
             newReply.TopicId = topicId;
 
-            if (_repo.AddReply(newReply) && _repo.save())
+            if (_repo.AddReply(newReply) && _repo.Save())
             {
                 return Request.CreateResponse(HttpStatusCode.Created, newReply);
             }
